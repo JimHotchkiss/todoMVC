@@ -1,8 +1,12 @@
 <section class="todoapp">
 	<header class="header">
     <h1>Your List</h1>
-    <input class="new-todo" placeholder="What needs to be done?" autofocus="">
-  </header>
+    
+    <%= form_for(List.new) do |f| %>
+      <%end%>
+    
+  
+    </header>
 
     <section class="main">
       <input id="toggle-all" class="toggle-all" type="checkbox">
@@ -12,7 +16,7 @@
         <% @lists.each do |list| %>
           <li>
             <div class="view">
-            <label> <%= link_to list.name, list_path(list), class: "todo-link" %> </label> 
+            <label> <%= link_to list.name, lists_path(list), class: "todo-link" %> </label> 
             </div>
           </li>
         <%end%>
