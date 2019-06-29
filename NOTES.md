@@ -24,3 +24,14 @@ I want user to be able to create lists. Then they should be able to add items to
     @ has many items
   * Items model 
     @ belongs to a list
+
+index.html.erb
+<section class='main'>
+<!-- follow code was deleted-->
+ <input id="toggle-all" class="toggle-all" type="checkbox">
+      <label for="toggle-all">Mark all as complete</label>
+
+
+form_for created the follow HTML
+<form class="new_list" id="new_list" action="/lists" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="wvyAlkcFBX268kM7Jokk6rrvIHSvYjznzVvUC7suEsomMwyCbXwO7spXknODKikRWr1PLsAA4aDG/3UD4aY52A==">
+</form>

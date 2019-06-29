@@ -2,15 +2,16 @@
 	<header class="header">
     <h1>Your List</h1>
     
-    <%= form_for(List.new) do |f| %>
+    <%= form_for(@list) do |f| %>
+      <!-- now we can build our input-->
+      <%= f.text_field :name, :class => "new-todo", :placeholder => "Add to the list..." %>
       <%end%>
     
   
     </header>
 
     <section class="main">
-      <input id="toggle-all" class="toggle-all" type="checkbox">
-      <label for="toggle-all">Mark all as complete</label>
+     
       
       <ul class="todo-list">
         <% @lists.each do |list| %>
